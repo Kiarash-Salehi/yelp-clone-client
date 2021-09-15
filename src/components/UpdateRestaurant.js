@@ -15,14 +15,14 @@ function UpdateRestaurant() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`/${id}`);
+        const res = await axios.post(`/${id}`);
         setName(res.data.restaurant.name);
         setLocation(res.data.restaurant.location);
         setPriceRange(res.data.restaurant.price_range);
       } catch (error) {
         showMessage({
           type: 'danger',
-          text: `There was an error with status ${error.response.status} getting the restaurant info!`
+          text: `There was an error with status ${error?.response?.status} getting the restaurant info!`
         });
       }
     };

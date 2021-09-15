@@ -29,7 +29,7 @@ function AddRestaurant() {
 		} catch (error) {
 			showMessage({
 				type: 'danger',
-				text: `There was an error with status ${error.response.status} creating the restaurant please try again!`
+				text: `There was an error with status ${error?.response?.status} creating the restaurant please try again!`
 			});
 		}
 	};
@@ -46,6 +46,7 @@ function AddRestaurant() {
 							type="text"
 							placeholder="Name"
 							className="form-control"
+							required
 						/>
 					</div>
 					<div className="col-md-3 mx-auto">
@@ -57,15 +58,18 @@ function AddRestaurant() {
 							type="text"
 							placeholder="Location"
 							className="form-control"
+							required
 						/>
 					</div>
 					<div className="col-md-3 mx-auto">
 						<select
+							style={{ cursor: "pointer" }}
 							className="custom-select mr-sm-2"
 							value={priceRange}
 							onChange={(e) => {
 								setPriceRange(e.target.value);
 							}}
+							required
 						>
 							<option disabled>Price Range</option>
 							<option value={1}>$</option>

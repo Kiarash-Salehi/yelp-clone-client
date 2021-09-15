@@ -15,7 +15,7 @@ function RestaurantList() {
 			} catch (error) {
 				showMessage({
 					type: 'danger',
-					text: `There was an error with status ${error.response.status} getting all the restaurants!`
+					text: `There was an error with status ${error?.response?.status} getting all the restaurants!`
 				});
 			}
 		})();
@@ -32,7 +32,7 @@ function RestaurantList() {
 		} catch (error) {
 			showMessage({
 				type: 'danger',
-				text: `There was an error with status ${error.response.status} deleting the restaurant please try again!`
+				text: `There was an error with status ${error?.response?.status} deleting the restaurant please try again!`
 			});
 		}
 	};

@@ -32,7 +32,7 @@ function AddReview() {
     } catch (error) {
       showMessage({
         type: 'danger',
-        text: `There was an error with status ${error.response.status} adding review!`
+        text: `There was an error with status ${error?.response?.status} adding review!`
       });
     }
   };
