@@ -10,7 +10,7 @@ function RestaurantList() {
 	useEffect(() => {
 		(async () => {
 			try {
-				const res = await axios.get('/');
+				const res = await axios.post('/');
 				setRestaurants(res.data.restaurants);
 			} catch (error) {
 				showMessage({

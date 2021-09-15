@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { MessageContext } from '../context/MessageContext';
 import '../index.css';
 
-function UpdateRestaurant(props) {
+function UpdateRestaurant() {
   const { id } = useParams();
   let history = useHistory();
   const [name, setName] = useState('');

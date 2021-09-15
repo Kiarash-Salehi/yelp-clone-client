@@ -17,7 +17,7 @@ function AddRestaurant() {
 				location,
 				price_range: priceRange
 			};
-			const res = await axios.post('/', restaurant);
+			const res = await axios.post('/add', restaurant);
 			addRestaurant(res.data.restaurant);
 			setName('');
 			setLocation('');

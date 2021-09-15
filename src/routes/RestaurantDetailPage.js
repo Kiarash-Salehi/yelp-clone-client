@@ -22,7 +22,7 @@ function RestaurantDetailPage() {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const res = await axios.get(`/${id}`);
+				const res = await axios.post(`/${id}`);
 				setSelectedRestaurantReviews(res.data.reviews);
 				setSelectedRestaurant(res.data.restaurant);
 				setTotalRating(res.data.reviews.reduce((total, curr) => {
